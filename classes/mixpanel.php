@@ -28,23 +28,18 @@ class Mixpanel
 		//$this->token = $token_string;
 	}
 
-	public static function event($event, $properties = array())
-	{
-		//Get the event and properties
-		$params = array(
-				'event' => $event, 
-				'properties' => $properties,
-			);
+	public function track($event, $properties=array()) {
+        $params = array(
+            'event' => $event,
+            'properties' => $properties
+            );
 
-		if(!isset($params['properties']['token']))
-		{
-			$params['properties']['token'] = $this->token;
-		}
-
-		//The URL that is to be sent
-		$url = $this->host.'track/?data='.base64_encode(json_encode($params));
-		//send the data in the background
-		exec("curl '".$url."' >/dev/null 2>&1 &");
-	}
+        if (!isset($params['properties']['token'])){
+            $params['properties']['token'] = $this->token;
+        }
+        $url = $this->host . 'track/?data=' . base64_encode(json_encode($params));
+        //you still need to run as a background process
+        exec("curl '" . $url . "' >/dev/null 2>&1 &"); 
+    }
 
 }

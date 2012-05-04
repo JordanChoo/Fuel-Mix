@@ -12,8 +12,8 @@
  * @link		http://github.com/JordanChoo/Fuel-Mix
  */
 
-//Add the namesapce
-Autoloader::add_core_namespace('Mixpanel', __DIR__.'/classes/');
+//Enable auto-loader to find
+Autoloader::add_namespace('MixPanel', __DIR__.'/classes/'), 
 
 //Get the appropriate files
 Autoloader::add_classes(array(
