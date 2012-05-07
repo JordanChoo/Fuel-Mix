@@ -4,13 +4,13 @@ Fuel-Mix is a FuelPHP package that allows you to send events to [MixPanel Analyt
 
 ##Getting Started
 
-1. Git clone the package into your deafult Package directory
+1. Git clone the package into your deafult Package directory.
 
-2. Rename the folder to Mixpanel
+2. Rename the folder to Mixpanel.
 
-3. Copy the mixpanel.php config file into your apps default config 
+3. Copy the mixpanel.php config file into your apps default config folder.
 
-4. Set the token value to the API token that MixPanel assigned to you
+4. Set the token value to the API token that MixPanel assigned to you.
 
 5. Have fun!
 
