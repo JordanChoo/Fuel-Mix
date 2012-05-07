@@ -25,7 +25,7 @@ $metrics = new Mixpanel\Mixpanel;
 $metrics->track('Purchased', array(
   	'item' => 'candy',
 		'type' => 'Wonderbar',
-		'distinct_id' => \Session::key('session_id');
+		'distinct_id' => Session::key('session_id');
 	));
 
 ```
