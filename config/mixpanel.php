@@ -15,8 +15,8 @@
 return array(
 
 	//State the API token
-	$token => '',
+	'token' => '',
 	//State the base URL for the API
-	$host => "http://api.mixpanel.com/",
+	'host' => "http://api.mixpanel.com/",
 
 );

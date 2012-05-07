@@ -16,23 +16,27 @@ namespace Mixpanel;
 
 class Mixpanel
 {
-
 	public $token;
 	public $host = 'http://api.mixpanel.com/';
 
 	//Initialize the package
-	public function _init()
+	public function __construct()
 	{
+        //Load the config file\
+        $config = \Config::load('mixpanel', true);
 		//Load the API token from the config file
-		$this->token = \Config::get('token');
-		//$this->token = $token_string;
+		$this->token = $config['token'];
+        //Load the host URL from the config file
+        $this->host = $config['host'];
 	}
 
-	public function track($event, $properties=array()) {
+	public function track($event, $properties = array()) {
+
         $params = array(
             'event' => $event,
             'properties' => $properties
             );
+        
 
         if (!isset($params['properties']['token'])){
             $params['properties']['token'] = $this->token;

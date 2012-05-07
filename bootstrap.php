@@ -13,7 +13,7 @@
  */
 
 //Enable auto-loader to find
-Autoloader::add_namespace('MixPanel', __DIR__.'/classes/'), 
+Autoloader::add_namespace('MixPanel', __DIR__.'/classes/');
 
 //Get the appropriate files
 Autoloader::add_classes(array(
