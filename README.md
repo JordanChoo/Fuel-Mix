@@ -1,6 +1,6 @@
 #Fuel-Mix
 
-
+Fuel-Mix is a FuelPHP package that allows you to send events to [MixPanel Analytics](http://mixpanel.com/) using their PHP API.
 
 ##Getting Started
 
